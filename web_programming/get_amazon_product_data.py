@@ -50,7 +50,7 @@ def get_amazon_product_data(product: str = "laptop") -> DataFrame:
             try:
                 product_rating = item.find("span", attrs={"class": "a-icon-alt"}).text
             except AttributeError:
-                product_rating = "Not available"
+                product_rating = "No rating availible for this product"
             try:
                 product_mrp = (
                     "₹"
